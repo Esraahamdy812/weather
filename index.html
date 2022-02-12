@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <!-- first section start -->
+   <section id="bckgrnd">
+       
+
+<!-- navbar start --> 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+    <a class="navbar-brand d-flex" href="#">
+        <img src="images/logo.png" alt="">  
+        <div class="logohead offset-1">
+        <h6 class="lead">weather</h6>
+    <p class="lead">taglines goes here</p>
+</div>
+    </a>
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto text-center ">
+        <li class="nav-item active ">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Live Cameras</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Photos </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        
+      </ul>
+    </div>
+</div>
+  </nav>
+<!-- navbar end -->
+
+   <!-- search start --> 
+   <div  class="container position-relative for-search">
+  <div class=" w-100 position-relative top-50">
+    <input id="mySearch" class="bg-dark w-75 p-3 text-white" type="text" placeholder="Find your location..." >
+    <input  class="p-3 text-white position-absolute btn-primary my-btn text-center" type="button" value="Find" id="submit">
+</div>
+</div>
+    <!-- search end -->
+    <!-- dark bg start -->
+     <div class="for-bg w-100"></div>
+      <!-- dark bg end -->
+        
+   </section>
+   <!-- first section end -->
+<!-- second section start -->
+<section id="myDataSection" class="w-100 position-relative ">
+  <div class="container  position-absolute temprature-section">
+    <div class="forecast-container d-flex justify-content-around align-items-lg-start" id="forecast">
+     
+      <!-- today weather start -->
+      <div id="weatherToday" class="today-forecast w-100">
+</div>
+     
+ <!-- today weather end -->
+
+  <!-- tomorrow weather start -->
+      <div  id="secondDay" class="second-forecast forecast  w-100">
+
+      </div>
+   <!-- tomorrow weather end -->
+
+    <!-- third day weather start -->
+  	<div id="thirdDay" class="third-forecast forecast  w-100">
+
+    </div>
+ <!-- third day weather end -->
+
+</div>
+  </div>
+</section>
+<!-- second section end -->
+<!-- footer start -->
+<footer>
+  <div class="container for-footer pt-5">
+    <div class="firstrow-footer d-flex justify-content-around">
+    <div class=" w-100 position-relative">
+      <input id="mailInput" class="bg-dark w-75 p-3 text-white " type="email" placeholder="Enter your email to subscribe...">
+      <input  class="p-3 text-white position-absolute btn-primary my-btn text-center" type="button" value="Subscribe" id="submit">
+  </div>
+  <div class="for-icons d-flex justify-content-around">
+    <i class="fab fa-facebook-f fa-x  bg-dark bg-dark text-center"></i>
+    <i class="fab fa-twitter fa-x bg-dark   text-center"></i>
+    <i class="fab fa-google-plus-g fa-x bg-dark text-center"></i>
+    <i class="fab fa-pinterest-p fa-x bg-dark text-center"></i>
+  </div>
+</div>
+   <p class="lead pt-3">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+</div> 
+</footer>
+<!-- footer start -->
+    <script src="javascript/popper.min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+    <script src="javascript/file.js"></script>
+</body>
+</html>
