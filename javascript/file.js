@@ -17,7 +17,7 @@ async function getCity(city) {
 }
 
 // function to get tempreature of the city 1st day
-async function getTempraturefirst() {
+function getTempraturefirst() {
   var todayTemprature = weatherContainer.forecast.forecastday[0].day.maxtemp_c;
   var todayDate = weatherContainer.forecast.forecastday[0].date;;
   var myRegion = weatherContainer.location.region;
@@ -53,7 +53,7 @@ async function getTempraturefirst() {
 
 
 // function to get tempreature of the city 2nd day
-async function getTempratureScnd() {
+ function getTempratureScnd() {
   var secondTemperature = weatherContainer.forecast.forecastday[1].day.maxtemp_c;
   var nextDate = weatherContainer.forecast.forecastday[1].date;
   var myRegion = weatherContainer.location.region;
@@ -88,7 +88,7 @@ async function getTempratureScnd() {
 }
 
 // function to get tempreature of the city 3rd day
-async function getTempratureThird() {
+ function getTempratureThird() {
   var thirdTemperature =  weatherContainer.forecast.forecastday[2].day.maxtemp_c;
   var nextDate = weatherContainer.forecast.forecastday[2].date;
   var myRegion = weatherContainer.location.region;
@@ -125,21 +125,22 @@ async function getOriginCity()
 {
   var response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=9a7f977bce2a42208d2142740211509&q=hawai&days=3`)
   weatherContainer = await response.json();
-  await getTempraturefirst();
-  await getTempratureScnd();
+  getTempraturefirst();
+  getTempratureScnd();
   getTempratureThird();
 }
 getOriginCity();
 
 async function view() {
   await getCity(userSearchInput.value);
-  await getTempraturefirst();
-  await getTempratureScnd();
+  getTempraturefirst();
+  getTempratureScnd();
   getTempratureThird();
 }
-find.onclick = function () { view(); };
+// find.onclick = function () { view(); };
+find.addEventListener("click",view)
 
-userSearchInput.onkeyup = function () { view(); };
+userSearchInput.addEventListener("keyup",view);
 view();
 
 
